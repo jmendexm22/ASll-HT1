@@ -1,6 +1,7 @@
-package gt.edu.umg.antiguaburger;
+package gt.edu.umg.antiguaburger.controller;
 
 
+import gt.edu.umg.antiguaburger.OrdenEncabezado;
 import java.util.*;
 
 /**
