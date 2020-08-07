@@ -12,7 +12,7 @@
 
 -Descripcion:
 -Análisis, diseño, planificación y programación del
--Sistema de Informacion para agilizar el proceso de pedido de Burguer King Antigua, mediante un -ambiente Web.
+-Sistema de Informacion para agilizar el proceso de pedido de Restaurantes Antigua Burguer, mediante un -ambiente Web.
 
 #### Funcionamiento:
 
