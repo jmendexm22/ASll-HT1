@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Getting Started: Handling Form Submission</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+
+        <script language="javascript">
+            function WriteToFile() {
+                var fso = new ActiveXObject("Scripting.FileSystemObject");
+                var s = fso.CreateTextFile("C:\\NewFile.txt", true);
+                var text = document.getElementById("TextArea1").innerText;
+                s.WriteLine(text);
+                s.WriteLine('***********************');
+                s.Close();
+            }
+        </script>
+
+        <style>
+            body {background-color: ivory;}
+        </style>
+    </head>
+    <body class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Result</h1>
+                <p th:text="'Número de orden: ' + ${ordenDetalle.id}" />
+                <p th:text="'Nombre del cajero: ' + ${ordenDetalle.content}" />
+                <p th:text="'Nombre del cliente:' + ${ordenDetalle.content2}"></p>
+                <p th:text="'Costo: ' + ${ordenDetalle.idmenu}" />
+            </div>
+        </div>
+        <div class="row">
+            <h6>Orden</h6>
+            <div class="col-md-3">
+                <p th:text="'--:' + ${ordenDetalle.envio1}"></p>
+                <p th:text="'--:' + ${ordenDetalle.envio2}"></p>
+                <p th:text="'--:' + ${ordenDetalle.envio3}"></p>
+                <p th:text="'--:' + ${ordenDetalle.envio4}"></p>
+                <p th:text="'--:' + ${ordenDetalle.envio5}"></p>
+
+            </div>
+            <div class="col-md-3">
+                <p th:text="'--:' + ${ordenDetalle.alternativa1}"></p>
+                <p th:text="'--:' + ${ordenDetalle.alternativa2}"></p>
+                <p th:text="'--:' + ${ordenDetalle.alternativa3}"></p>
+                <p th:text="'--:' + ${ordenDetalle.alternativa4}"></p>
+                <p th:text="'--:' + ${ordenDetalle.alternativa5}"></p>
+            </div>
+            <div class="col-md-3">
+                <p th:text="'--:' + ${ordenDetalle.almu1}"></p>
+                <p th:text="'--:' + ${ordenDetalle.almu2}"></p>
+                <p th:text="'--:' + ${ordenDetalle.almu3}"></p>
+                <p th:text="'--:' + ${ordenDetalle.almu4}"></p>
+                <p th:text="'--:' + ${ordenDetalle.almu5}"></p>
+                <p th:text="'--:' + ${ordenDetalle.almu6}"></p>
+            </div>
+        </div>
+    </div>
+
+    ///////////////////////////////////////
+    <a class="btn-danger" href="/nuevaOrden">Otra orden</a>
+
+    <button onclick="WriteToFile()">Click to save</Button>
+</body>
+</html>
